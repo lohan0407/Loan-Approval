@@ -1,0 +1,36 @@
+ //Loan Approval:
+//You are developing a loan approval system. Write a Java program that takes a 
+//user's credit score, income, and loan amount as input and determines whether the 
+//loan should be approved or denied based on predefined criteria
+
+
+import java.util.Scanner;
+
+public class LoanApprovalSystem {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        
+        System.out.print("Enter your credit score: ");
+        int creditScore = scanner.nextInt();
+
+        System.out.print("Enter your annual income: ");
+        double income = scanner.nextDouble();
+
+        System.out.print("Enter the loan amount: ");
+        double loanAmount = scanner.nextDouble();
+
+        
+        int minCreditScore = 700;
+        double minIncome = 30000.0;
+        double maxLoanAmount = 100000.0;
+
+        
+        if (creditScore >= minCreditScore && income >= minIncome && loanAmount <= maxLoanAmount) {
+            System.out.println("Congratulations! Your loan is approved.");
+        } else {
+            System.out.println("Sorry, your loan application is denied.");
+        }
+      scanner.close();
+    }
+}
